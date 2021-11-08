@@ -1,0 +1,18 @@
+.list {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.listItem {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.deleteButton {
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: rgb(248, 123, 242);
+  color: #ffff;
+  border: none;
+  border-radius: 5px;
+}
