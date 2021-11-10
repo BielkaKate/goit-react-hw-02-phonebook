@@ -29,7 +29,9 @@ class App extends Component {
   };
 
   handleSubmit = data => {
-    this.state.contacts.find(contact => contact.name === data.name)
+    this.state.contacts.find(
+      contact => contact.name.toLowerCase() === data.name.toLowerCase(),
+    )
       ? alert(`${data.name} is already in contacts`)
       : this.setState(prevState => ({
           contacts: [
@@ -40,7 +42,8 @@ class App extends Component {
   };
 
   changeFilter = e => {
-    this.setState({ filter: e.currentTarget.value });
+    const { value } = e.currentTarget;
+    this.setState({ filter: value });
   };
 
   getVisibleContacts = () => {
